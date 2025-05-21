@@ -1,1 +1,6 @@
 alembic
+fastapi
+asyncpg
+uvicorn
+SQLAlchemy
+ruff
