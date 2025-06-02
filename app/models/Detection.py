@@ -22,6 +22,4 @@ class Detection(Base):
 
     media = relationship("Media", back_populates="detections")
     asset_definition = relationship("AssetDefinition", back_populates="detections")
-    answers = relationship(
-        "DetectionAnswer", back_populates="detection", cascade="all, delete-orphan"
-    )
+    answers = relationship("DetectionAnswer", back_populates="detection")

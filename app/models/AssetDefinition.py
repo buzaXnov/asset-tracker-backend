@@ -11,9 +11,5 @@ class AssetDefinition(Base):
     label = Column(String, nullable=False)
 
     user = relationship("User", back_populates="assets")
-    questions = relationship(
-        "AssetQuestion", back_populates="asset", cascade="all, delete-orphan"
-    )
-    detections = relationship(
-        "Detection", back_populates="asset_definition", cascade="all, delete-orphan"
-    )
+    questions = relationship("AssetQuestion", back_populates="asset")
+    detections = relationship("Detection", back_populates="asset_definition")

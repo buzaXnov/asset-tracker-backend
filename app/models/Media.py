@@ -12,6 +12,4 @@ class Media(Base):
     type = Column(String, nullable=False)  # "image" or "video"
 
     user = relationship("User", back_populates="media")
-    detections = relationship(
-        "Detection", back_populates="media", cascade="all, delete-orphan"
-    )
+    detections = relationship("Detection", back_populates="media")
