@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.api import routes_assets
+from app.api import routes_assets, routes_detections, routes_media, routes_users
 
 app = FastAPI(
     title="Asset Tracker API",
@@ -12,6 +12,9 @@ app = FastAPI(
 )
 
 app.include_router(routes_assets.router)
+app.include_router(routes_users.router)
+app.include_router(routes_detections.router)
+app.include_router(routes_media.router)
 
 
 @app.get("/")
