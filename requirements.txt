@@ -4,3 +4,7 @@ asyncpg
 uvicorn
 SQLAlchemy
 ruff
+greenlet
+pydantic
+opencv-python
+python-multipart
